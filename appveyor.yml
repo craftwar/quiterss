@@ -5,7 +5,7 @@ skip_tags: true
 #rdp debug
 init:
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
-  - cmd
+#  - cmd
 
 #branches:
 #  only:
@@ -21,7 +21,8 @@ environment:
     QMAKESPEC: win32-msvc
     PRO_MAKE: nmake
     PRO_CHECK: nmake check
-
+    
+#no mingw qt on vs2017 image
 #  - BUILD: Qt5.9-mingw32
 #    QTDIR: 'c:\qt\5.9\mingw53_32'
 #    COMPILERDIR: 'c:\qt\tools\mingw53_32\bin'
@@ -38,7 +39,6 @@ environment:
     
    
 install:
-#- choco install curl 7zip # dependencywalker
 - set QT_PLUGIN_PATH=%QTDIR%\plugins
 - set "PATH=%QTDIR%\bin;%PATH%"
 - if defined COMPILERDIR set "PATH=%COMPILERDIR%;%PATH%"
