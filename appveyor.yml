@@ -11,7 +11,7 @@ init:
 #  - master
 
 environment:
-  PRO_FILE: 'C:\projects\quiterss\QuiteRSS.pro'
+  PRO_FILE: '%APPVEYOR_BUILD_FOLDER%\QuiteRSS.pro'
 
   matrix: 
   - BUILD: Qt5.4.1-mingw32
@@ -44,8 +44,8 @@ install:
 
 after_build:
 - 7z a "%BUILD%.zip" ".\build\%BUILD%\release\target\*"
-- dir "c:\projects\quiterss"
-- dir "c:\projects\quiterss\build"
+- dir "%APPVEYOR_BUILD_FOLDER%"
+- dir "%APPVEYOR_BUILD_FOLDER%\build"
 
 build_script:
 - echo "building %BUILD%"
