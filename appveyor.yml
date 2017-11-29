@@ -18,21 +18,21 @@ environment:
   - BUILD: Qt5.9-x64-msvc2017
     QTDIR: 'c:\qt\5.9\msvc2017_64'
     COMPILERBAT: '"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"'
-    QMAKESPEC: win32-msvc2013
+    QMAKESPEC: win32-msvc
     PRO_MAKE: nmake
     PRO_CHECK: nmake check
 
-  - BUILD: Qt5.9-mingw32
-    QTDIR: 'c:\qt\5.9\mingw491_32'
-    COMPILERDIR: 'c:\qt\tools\mingw491_32\bin'
-    QMAKESPEC: win32-g++
-    PRO_MAKE: mingw32-make
-    PRO_CHECK: mingw32-make check
+#  - BUILD: Qt5.9-mingw32
+#    QTDIR: 'c:\qt\5.9\mingw53_32'
+#    COMPILERDIR: 'c:\qt\tools\mingw53_32\bin'
+#    QMAKESPEC: win32-g++
+#    PRO_MAKE: mingw32-make
+#    PRO_CHECK: mingw32-make check
 
   - BUILD: Qt5.9-x86-msvc2017
     QTDIR: 'c:\qt\5.9\msvc2015'
     COMPILERBAT: '"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat"'
-    QMAKESPEC: win32-msvc2013
+    QMAKESPEC: win32-msvc
     PRO_MAKE: nmake
     PRO_CHECK: nmake check
     
